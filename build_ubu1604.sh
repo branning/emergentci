@@ -8,38 +8,38 @@ quiet()
   $@ >/dev/null 2>&1
 }
 
-apt-get update -y
-apt-get install -y \
-                csh \
-                cmake \
-                g++ \
-                clang \
-                python-pip \
-                mercurial \
-                subversion \
-                libsvn-dev \
-                devscripts \
-                pkg-config \
-                libreadline6-dev \
-                libncurses5-dev \
-                zlib1g-dev \
-                libcoin80-dev \
-                libsndfile1-dev \
-                libpng12-dev \
-                libjpeg-dev \
-                libode-dev \
-                libopenmpi-dev \
-                openmpi-bin \
-                libode-dev \
-                libgsl0-dev \
-                qt5-default \
-                qttools5-dev \
-                qtmultimedia5-dev \
-                qtlocation5-dev \
-                libqt5webkit5-dev
-                libqt5webkit5-dev \
-                libqt5designer5 \
-                libqt5svg5-dev \
+quiet apt-get update -y
+quiet apt-get install -y \
+                      csh \
+                      cmake \
+                      g++ \
+                      clang \
+                      python-pip \
+                      mercurial \
+                      subversion \
+                      libsvn-dev \
+                      devscripts \
+                      pkg-config \
+                      libreadline6-dev \
+                      libncurses5-dev \
+                      zlib1g-dev \
+                      libcoin80-dev \
+                      libsndfile1-dev \
+                      libpng12-dev \
+                      libjpeg-dev \
+                      libode-dev \
+                      libopenmpi-dev \
+                      openmpi-bin \
+                      libode-dev \
+                      libgsl0-dev \
+                      qt5-default \
+                      qttools5-dev \
+                      qtmultimedia5-dev \
+                      qtlocation5-dev \
+                      libqt5webkit5-dev
+                      libqt5webkit5-dev \
+                      libqt5designer5 \
+                      libqt5svg5-dev \
 ;
 
 # anonymous svn to checkout trunk of quarter and emergent
