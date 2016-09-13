@@ -2,6 +2,12 @@
 #
 # Build quarter and emergent from svn trunk on Ubuntu 16.04
 
+quiet() 
+{ 
+  echo "Quietly running: $@"
+  $@ >/dev/null 2>&1
+}
+
 apt-get update -y
 apt-get install -y \
                 csh \
@@ -37,8 +43,8 @@ apt-get install -y \
 ;
 
 # anonymous svn to checkout trunk of quarter and emergent
-svn checkout https://grey.colorado.edu/svn/emergent/emergent/trunk ~/emergent
-svn checkout https://grey.colorado.edu/svn/coin3d/quarter/trunk ~/quarter_trunk
+quiet svn checkout https://grey.colorado.edu/svn/emergent/emergent/trunk ~/emergent
+quiet svn checkout https://grey.colorado.edu/svn/coin3d/quarter/trunk ~/quarter_trunk
 
 # compile quarter
 cd ~/quarter_trunk
