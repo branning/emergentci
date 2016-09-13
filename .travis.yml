@@ -1,0 +1,8 @@
+sudo: required
+dist: trusty
+
+before_install:
+  - chmod +x build_1604.sh
+
+script:
+  - build.sh
