@@ -1,5 +1,9 @@
 sudo: required
 dist: trusty
 
+before_install:
+  - chmod +x build_ubu1604.sh
+  - chmod +x build.sh
+
 script:
-  - sudo bash build.sh
+  - sudo ./build.sh
