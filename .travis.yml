@@ -2,4 +2,4 @@ sudo: required
 dist: trusty
 
 script:
-  - ./build.sh
+  - sudo bash build.sh
