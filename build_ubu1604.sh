@@ -36,7 +36,6 @@ quiet apt-get install -y \
                       qttools5-dev \
                       qtmultimedia5-dev \
                       qtlocation5-dev \
-                      libqt5webkit5-dev
                       libqt5webkit5-dev \
                       libqt5designer5 \
                       libqt5svg5-dev \
