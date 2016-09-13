@@ -2,6 +2,8 @@
 #
 # Build quarter and emergent from svn trunk on Ubuntu 16.04
 
+set -o xtrace
+
 quiet() 
 { 
   echo "Quietly running: $@"
