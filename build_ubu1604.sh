@@ -8,6 +8,13 @@ quiet()
   $@ >/dev/null 2>&1
 }
 
+detect_ncores()
+{
+  grep -c processor /proc/cpuinfo || echo 1
+}
+
+cores=`detect_ncores`
+
 quiet apt-get update -y
 quiet apt-get install -y \
                       csh \
@@ -64,7 +71,7 @@ cd ~/quarter_trunk
                       -I/usr/include/x86_64-linux-gnu/qt5/QtOpenGL/ \
                       -I/usr/include/x86_64-linux-gnu/qt5/QtGui/ -fPIC" \
             CONFIG_QTLIBS="-lQt5Core -lQt5OpenGL -lQt5Gui"
-make
+make -j ${cores}
 make install
 
 # compile emergent
@@ -91,4 +98,4 @@ export CXX=clang++
             CONFIG_QTLIBS="-lQt5Core -lQt5OpenGL -lQt5Gui" \
             --qt5
 cd build
-make
+make -j ${cores}
